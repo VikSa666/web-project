@@ -1,120 +1,258 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* This defines default constants that can be called by their name */
+
+
 :root {
-    --body-color: #2c2d2a;
-    --savanna-bg: #e9bf8b;
-    --beach-bg: #e7dfcf;
-    --glacier-bg: #b6d6c8;
-    --coral-bg: #e86357;
-    --arrow-fill: #333231;
-    --body-font: "Montserrat", sans-serif;
-    --italic-font: "EB Garamond", serif;
+    /*======== Main theme colors =========*/
+    --first-color: #0e2431;
+    --second-color: #6a59d1;
+    --third-color: #777;
+
+    /*======== Hover colors =============*/
+    --hover-color: #614fd0;
+
+    /*========= Background colors =========*/
+    --body-bg-color: #fefefe;
+    --card-bg-color: #fff;
+    --modal-bg-color: #fff;
+    --bg-transparent-color: rgba(0, 0, 0, 0.1);
+    --transparent-color-01: rgba(0, 0, 0, 0.1);
+    --transparent-color-02: rgma(106, 89, 209, 0.1);
+    --line-color: #d7d7d7;
+
+    /*========== Color Filter ===========*/
+    --color-filter: invert(1);
+
+    /*========== Box shadow =============*/
+    --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+
+    /*========== Font Size ==============*/
+    --small-font-size: 0.9em;
+    --normal-font-size: 1em;
+
+    /*========= Scroll bar colors ==========*/
+    --scroll-bar-color: #c5cadf;
+    --scroll-thumb-color: #70768a;
+    --scroll-thumb-hover-color: #454f6b;
 }
 
-/* This is a configuration for everything */
-* {
+/*======================================================================================*/
+/*==================================== GENERAL =========================================*/
+/*======================================================================================*/
+
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
 }
 
-/* This is the general body configuration */
+
 body {
-    font-family: var(--body-font);
-    background-color: #1d1e20;
+    color: var(--first-color);
+    background: var(--body-bg-color);
+    /*rem values are relative to the root html element, not to the parent element. That is, If font-size of the root element is 16px then 1 rem = 16px for all elements. If font-size is not explicitly defined in root element then 1rem will be equal to the default font-size provided by the browser (usually 16px).*/
+    margin: 2rem 0 0 0;
+    transition: .5s ease;
+}
+
+a {
+    text-decoration: none; /* Remove the underline and blue color from hrefs */
+}
+
+li {
+    list-style: none;
+}
+
+.btn {
+    background: var(--second-color);
+    color: #fff;
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 20px 30px; /* Esto es para lo gordo que es el cuadradito (alto y ancho resp)*/
+    letter-spacing: 1px;
+    border-radius: 20px; /* Esto es para las esquinas */
+}
+
+.btn:hover {
+    background: var(--hover-color);
+}
+/*======================================================================================*/
+
+
+
+
+/*======================================================================================*/
+/*==================================== HEADER ==========================================*/
+/*======================================================================================*/
+
+header {
+    z-index: 99999;
+    width: 100%;
+    position: fixed; /* Always will appear at the top */
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    transition: .6s ease;
+}
+
+.nav-bar {
+    position: relative;
+    height: calc(4rem + 1rem);
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    transition: .6s ease;
+} 
+
+.nav-bar .logo {
+    color: var(--first-color);
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.nav-items a{
+    color: var(--first-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+}
+
+.nav-items a:not(:last-child) {
+    margin-right: 50px;
+}
+
+/*This is for when the mouse is on it*/
+.nav-items a:hover {
+    color: var(--second-color);
+}
+/*======================================================================================*/
+
+
+
+
+/*======================================================================================*/
+/*================================= HOME SECTION =======================================*/
+/*======================================================================================*/
+
+.home {
+    position: relative;
+    max-width: 1250px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+    flex-direction: column;
+}
+
+.home .home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.home-container .media-icons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.home-container .media-icons a{
+    color: var(--second-color);
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.home-container .media-icons a:hover {
+    color: var(--hover-color);
+}
+
+.contact-me-arrow:hover {
+    color: var(--hover-color);
+    margin-left: 5px;
+}
+
+.contact-me:hover {
+    color: var(--hover-color);
+}
+
+.home-container .info h2 {
+    font-size: 4em;
+    font-weight: 600;
+    line-height: 70px;
+}
+
+.home-container .info h3 {
+    color: var(--third-color);
+    font-feature-settings: 1.3em;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+.home-container .info p {
+    color: var(--third-color);
+    font-size: var(--normal-font-size);
+    max-width: 350px;
+}
+
+.home-container .home-img {
+    position: relative;
+}
+
+.home-container .home-img img {
+    width: 90%;
+    transform: translate(0, 0);
+}
+
+.home .scroll-down {
+    color: var(--first-color);
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.home .scroll-down i {
+    color: var(--second-color);
+    font-size: 1.2em;
+    animation: arrow-down ease 2s infinite;
+}
+
+@keyframes arrow-down {
+    0%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(10px);
+    }
+}
+/*======================================================================================*/
+
+
+
+
+/*======================================================================================*/
+/*================================ COMMON STYLES =======================================*/
+/*======================================================================================*/
+/* flex-center is for all the sections */
+.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 2em;
-    width: 100%;
-    height: 100vh;
-    color: var(--body-color);
 }
 
-/* The media thing is to do this if the thing between parentheses happens */
-@media (max-width: 480px) {
-    body {
-        padding: 0;
-   }
-}
-
-/* Container configuration --> A box inside the body */
-.container {
-    max-width: 1100px;
-    border-radius: 4px;
-    max-height: 680px;
-    height: 90vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    scroll-behavior: smooth;
-    background-color: #e6decf;
-    padding: 0 30px;
-    overflow-y: auto;
-    overflow-x: hidden;
+.section {
     position: relative;
-}
-@media (max-width: 480px) {
-    .container {
-        height: 100%;
-        max-height: 100%;
-   }
-}
-
-/* Header elements */
-.header {
-    display: flex;
-    align-items: center;
-    height: 62px;
-    width: 100%;
-    white-space: nowrap;
-    flex-shrink: 0;
-    font-weight: 600;
-    font-size: 15px;
-    border-bottom: 1px solid rgba(44, 45, 42, 0.25);
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: var(--beach-bg);
-    z-index: 6;
-}
-@media (max-width: 575px) {
-    .header {
-        width: calc(100% + 20px);
-        margin-left: -10px;
-   }
-}
-.header .header-menu {
-    display: flex;
-    align-items: center;
+    width: 1150px;
     margin-left: auto;
-}
-@media screen and (max-width: 740px) {
-    .header .header-menu {
-        display: none;
-   }
-}
-.header .header-menu a:not(:first-child) {
-    margin-left: 30px;
-}
-.header .header-menu-icon {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-.header .header-menu-icon svg {
-    width: 22px;
-}
-.header .header-icons {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-}
-.header .header-icons svg {
-    width: 18px;
-}
-.header .header-icons svg:not(:last-child) {
-    margin-right: 20px;
+    margin-right: auto;
+    padding: 6rem 2rem 2rem;
 }
