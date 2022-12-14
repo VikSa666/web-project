@@ -4,7 +4,7 @@ window.addEventListener("scroll", function () {
     header.classList.toggle("sticky", window.scrollY > 0);
 })
 
-let button = document.getElementById('uploadExcel').onclick = function () {
+document.getElementById('uploadExcel').onchange = function () {
 
     this.parseExcel = function (file) {
         var reader = new FileReader();
