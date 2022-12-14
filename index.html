@@ -1,157 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Víctor Santiago's website</title>
-      <link rel = "stylesheet" href="mainstyle.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-    <body>
-      
-      <!--====================== HEAD SECTION =========================-->
-      <header>
-        <!-- Navigation bar -->
-        <div class="nav-bar">
-          <!-- My name as a logo with href = "#" it means that it does not lead to any place -->
-          <a href="#" class="logo">Víctor</a>
-          <!-- All the buttons and options -->
-          <div class="navigation">
-            <div class="nav-items">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#skills">Skills</a>
-              <a href="travels">My Trips</a>
-              <a href="#contact">Contact</a>
-            </div>
-          </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Víctor Santiago's website</title>
+  <link rel="stylesheet" href="mainstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!--====================== HEAD SECTION =========================-->
+  <header>
+    <!-- Navigation bar -->
+    <div class="nav-bar">
+      <!-- My name as a logo with href = "#" it means that it does not lead to any place -->
+      <a href="#" class="logo">Víctor</a>
+      <!-- All the buttons and options -->
+      <div class="navigation">
+        <div class="nav-items">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="travels">My Trips</a>
+          <a href="#contact">Contact</a>
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
 
-      <!--======================= SECTIONS ===============================-->
+  <!--======================= SECTIONS ===============================-->
 
-      <!-- Home section -->
-      <section class="home flex-center" id="home">
-        <div class="home-container">
-          <div class="media-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-          </div>
-          <div class="info">
-            <h2>Hi, I am Víctor</h2>
-            <h3>Mathematician and Developer</h3>
-            <p>I am a mathematician, I am good at solving your problems</p>
-            <a href="#contact" class="btn">Contact Me <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-          <div class="home-img">
-            <img src="images/me.png">
-          </div>
+  <!-- Home section -->
+  <section class="home flex-center" id="home">
+    <div class="home-container">
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="info">
+        <h2>Hi, I am Víctor</h2>
+        <h3>Mathematician and Developer</h3>
+        <p>I am a mathematician, I am good at solving your problems</p>
+        <a href="#contact" class="btn">Contact Me <i class="fas fa-arrow-circle-right"></i></a>
+      </div>
+      <div class="home-img">
+        <img src="images/me.png">
+      </div>
+    </div>
+    <a href="#about" class="scroll-down">Scroll Down <i class="fas fa-arrow-down"></i></a>
+  </section>
+
+  <!-- About section -->
+  <section class="about section" id="about">
+    <div class="container flex-center">
+      <h1 class="section-title-01">About Me</h1>
+      <h2 class="section-title-02">About Me</h2>
+      <div class="content flex-center">
+        <div class="about-img">
+          <img src="images/aboutme.JPG" alt="">
         </div>
-        <a href="#about" class="scroll-down">Scroll Down <i class="fas fa-arrow-down"></i></a>
-      </section>
-
-      <!-- About section -->
-      <section class="about section" id="about">
-        <div class="container flex-center">
-          <h1 class="section-title-01">About Me</h1>
-          <h2 class="section-title-02">About Me</h2>
-          <div class="content flex-center">
-            <div class="about-img">
-              <img src="images/aboutme.JPG" alt="">
-            </div>
-            <div class="about-info">
-              <div class="description">
-                <h3>I'm Víctor</h3>
-                <h4>An intern <span>Back-End Developer</span> based in <span>Barcelona</span></h4>
-                <p>
-                  I am a passionate programmer who studied <span>Mathematics</span> at <span>Universitat de Barcelona</span>.
-                  I have experience on Back-End programming with <span>Rust</span> and also <span>Java</span>. 
-                  My passions are mathematics, programming, but also traveling and reading books and always keep myself learning new things.
-                </p>
-              </div>
-              <ul class="experience-list">
-                <li class="list-item">
-                  <h3>5+</h3>
-                  <span>Programming Languages</span>
-                </li>
-                <li class="list-item">
-                  <h3>1+</h3>
-                  <span>Years of Experience</span>
-                </li>
-                <li class="list-item">
-                  <h3>20+</h3>
-                  <span>Visited Countries</span>
-                </li>
-              </ul>
-              <a href="" class="btn">Download CV <i class="fas fa-download"></i></a>
-            </div>
+        <div class="about-info">
+          <div class="description">
+            <h3>I'm Víctor</h3>
+            <h4>An intern <span>Back-End Developer</span> based in <span>Barcelona</span></h4>
+            <p>
+              I am a passionate programmer who studied <span>Mathematics</span> at <span>Universitat de
+                Barcelona</span>.
+              I have experience on Back-End programming with <span>Rust</span> and also <span>Java</span>.
+              My passions are mathematics, programming, but also traveling and reading books and always keep myself
+              learning new things.
+            </p>
           </div>
+          <ul class="experience-list">
+            <li class="list-item">
+              <h3>5+</h3>
+              <span>Programming Languages</span>
+            </li>
+            <li class="list-item">
+              <h3>1+</h3>
+              <span>Years of Experience</span>
+            </li>
+            <li class="list-item">
+              <h3>20+</h3>
+              <span>Visited Countries</span>
+            </li>
+          </ul>
+          <a href="" class="btn">Download CV <i class="fas fa-download"></i></a>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <!-- Skills section -->
-      <section class="skills" id="skills"></section>
+  <!-- Skills section -->
+  <section class="skills" id="skills"></section>
 
-      <!-- Travels section -->
-      <section class="travels section" id="travels">
-        <div class="container flex-center">
-          <h1 class="section-title-01">My Trips</h1>
-          <h2 class="section-title-02">My Trips</h2>
-          <div class="content flex-center">
-            <!-- Buttons -->
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio1">
-            <!-- Slides -->
-            <div class="slide italy" id="italy">
-              <img src="images/countries/italy.jpg" alt="" class="italy">
-            </div>
-            <div class="slide france" id="france">
-              <img src="images/countries/france.jpg" alt="" class="france">
-            </div>
-            <div class="slide czech" id="czech">
-              <img src="images/countries/czech.jpg" alt="" class="czech">
-            </div>
-            <div class="slide romania" id="romania">
-              <img src="images/countries/romania.jpg" alt="" class="romania">
-            </div>
-            <div class="slide finland" id="finland">
-              <img src="images/countries/finland.jpg" alt="" class="finland">
-            </div>
-            <div class="slide germany" id="germany">
-              <img src="images/countries/germany.jpg" alt="" class="germany">
-            </div>
-            <div class="slide hungary" id="hungary">
-              <img src="images/countries/hungary.jpg" alt="" class="hungary">
-            </div>
-            <div class="slide netherlands" id="netherlands">
-              <img src="images/countries/netherlands.jpg" alt="" class="netherlands">
-            </div>
-            <div class="slide ny" id="ny">
-              <img src="images/countries/ny.jpg" alt="" class="ny">
-            </div>
-            <div class="slide poland" id="poland">
-              <img src="images/countries/poland.jpg" alt="" class="poland">
-            </div>
-          </div>
+  <!-- Travels section -->
+  <section class="travels section" id="travels">
+    <div class="container flex-center">
+      <h1 class="section-title-01">My Trips</h1>
+      <h2 class="section-title-02">My Trips</h2>
+      <div class="content flex-center">
+        <!-- Buttons -->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio1">
+        <!-- Slides -->
+        <div class="slide italy" id="italy">
+          <img src="images/countries/italy.jpg" alt="" class="italy">
         </div>
-      </section>
+        <div class="slide france" id="france">
+          <img src="images/countries/france.jpg" alt="" class="france">
+        </div>
+        <div class="slide czech" id="czech">
+          <img src="images/countries/czech.jpg" alt="" class="czech">
+        </div>
+        <div class="slide romania" id="romania">
+          <img src="images/countries/romania.jpg" alt="" class="romania">
+        </div>
+        <div class="slide finland" id="finland">
+          <img src="images/countries/finland.jpg" alt="" class="finland">
+        </div>
+        <div class="slide germany" id="germany">
+          <img src="images/countries/germany.jpg" alt="" class="germany">
+        </div>
+        <div class="slide hungary" id="hungary">
+          <img src="images/countries/hungary.jpg" alt="" class="hungary">
+        </div>
+        <div class="slide netherlands" id="netherlands">
+          <img src="images/countries/netherlands.jpg" alt="" class="netherlands">
+        </div>
+        <div class="slide ny" id="ny">
+          <img src="images/countries/ny.jpg" alt="" class="ny">
+        </div>
+        <div class="slide poland" id="poland">
+          <img src="images/countries/poland.jpg" alt="" class="poland">
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <!-- Contact section -->
-      <section class="contact" id="contact"></section>
+  <!-- Contact section -->
+  <section class="contact" id="contact"></section>
 
 
 
 
-      <!-- External script -->
-      <script src="main.js"></script>
-    </body>
+  <!-- External script -->
+  <script src="main.js"></script>
+</body>
+
 </html>
